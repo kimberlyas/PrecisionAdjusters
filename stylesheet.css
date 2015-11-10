@@ -1,0 +1,118 @@
+/*CSS Template for Precision Adjusters*/
+
+body {
+	background: #ededed url(https://googledrive.com/host/0B3zmJAfIk6jvVzZ5dTc1VDdHNlU) repeat-x top center;
+	line-height: 1;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#header {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+}
+#header .section {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#header .section .logo {
+	float: left;
+	margin: 0;
+	padding: 60px 0 0 10px;
+	width: 324px;
+
+}
+#header .section .logo a {
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvenVHT1lQQzg1U3M) repeat-x top left;
+	color: #fff;
+	display: block;
+	font-family: 'Cambria';
+	font-size: 40px;
+	font-weight: bold;
+	height: 230px;
+	margin: 0;
+	padding: 25px;
+	text-align:center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 270px;
+}
+#header .section ul {
+	display: inline-block;
+	float: right;
+	margin: 0;
+	overflow: hidden;
+	padding: 114px 0 0;
+}
+#header .section ul li {
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvTk9nVXMzdXQyZDQ) no-repeat top right;
+	display: inline-block;
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+#header .section ul li a {
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvZHF0QUk1SnV0Mmc) no-repeat top left;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	height: 30px;
+	letter-spacing: 0.05em;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 15px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#header .section ul li a:hover {
+	color: #ccc;
+}
+#header .section ul li.selected {
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvc1VZNkRPeTZnMFk) no-repeat top right;
+}
+#header .section ul li.selected a {
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvb2xVNkxkekxYb0k) no-repeat top left;
+}
+
+#body {
+	margin: 0 auto;
+	height: 1024px;
+	padding: 20px 0 50px;
+	width: 960px;
+}
+
+#body p {
+	color: #464646;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	padding: 30px 10px;
+}
+
+
+#footer {
+	background: #4c8f96;
+	border-top: 1px solid #9bd9e0;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	height: 160px;
+	position: absolute;
+	left: 0;
+    bottom: 0;
+}
+
+#footer p {
+	color: #ededed;
+	font-size: 16px;
+	margin: auto;
+	text-align: center;
+	font: Cambria;
+}
+
+
