@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+	<title>P.A. Add Record</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="add-record.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">Precision Adjusters</a> <!-- Main menu -->
+			</div>
+			<ul>
+				<li>
+					<a>User Type</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a>User Name</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<h1>Victim's Information</h1>
+		<div id="logon">
+				<form name="addrecord" action="" method="post" >
+					<table class="form" border="0">
+
+						<tr>
+							<td></td>
+							<td style="color:red;">
+							<?php echo $msg; ?></td>
+						</tr> 
+			
+						<tr>
+							<th><label for="fname"><strong> First Name</strong></label> <br>
+							<input class="inp-text" name="fname" id="fname" type="text" size="15" /></th>
+							<th><label for="trn"><strong> TRN </strong></label> <br>
+							<input class="inp-text" name="trn" id="trn" type="text" size="15" /></th>
+							<th><label>Mortal Status</label> <br>
+             				<select id = "mStatus"> 
+               				<option value = "Alive">Alive</option>
+               				<option value = "Dead">Deceased</option>
+             				</select> </th>
+						</tr>
+
+						<tr>
+							<th><label for="mname"><strong> Middle Name </strong></label> <br> 
+							<input class="inp-text" name="mname" id="mname" type="text" size="15" /> </th>
+							<th><label for="address"><strong> Address </strong></label> <br>
+							<input class="inp-text" name="address" id="address" type="text" size="15" /></th>
+							<th><label for="hnumber"><strong> Home Number </strong></label> <br>
+							<input class="inp-text" name="hnumber" id="hnumber" type="text" size="15" /></th>
+						</tr>
+						
+						<tr>
+							<th><label for="lname"><strong> Last Name </strong></label> <br> 
+							<input class="inp-text" name="lname" id="lname" type="text" size="15" /> </th>
+							<th><label for="email"><strong> Email </strong></label> <br>
+							<input class="inp-text" name="email" id="email" type="text" size="15" /></th>
+							<th><label for="wnumber"><strong> Work Number </strong></label> <br>
+							<input class="inp-text" name="wnumber" id="wnumber" type="text" size="15" /></th>
+						</tr>
+						
+						<tr>
+							<th><label for="dob"><strong> Date Of Birth </strong></label> <br> 
+							<input class="inp-text" name="dob" id="dob" type="text" size="15" /> </th>
+							<th><label for="occupation"><strong> Occupation </strong></label> <br> 
+							<input class="inp-text" name="occupation" id="occupation" type="text" size="15" /> </th>
+							<th><label for="cnumber"><strong> Cell Number </strong></label> <br>
+							<input class="inp-text" name="cnumber" id="cnumber" type="text" size="15" /></th>
+						</tr>
+
+						<tr>
+							<td></td>
+							<td class="save-button-center">
+							<input class="save_bt" type="button" value="Save" alt="Save" title="Save" />
+							</td>
+						</tr>
+
+					</table>
+				</form>
+		<div>
+	<div>
+	<div id="footer">
+			<p>
+				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
+			</p>
+	</div>
+</body>
+</html>
