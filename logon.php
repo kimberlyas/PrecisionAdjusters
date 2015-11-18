@@ -1,13 +1,15 @@
-<?php include "dbConfig.php";
+<?php include "userdbConfig.php";
+
+session_start(); // Start Session
 
 $msg = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST["name"];
-    $password = md5($_POST["password"]);
+    $name = $_POST["username"]; // Get entered username
+    $password = md5($_POST["password"]); // Get entered password and encrypt it
 	 if ($name == '' || $password == '') {
         $msg = "You must enter all fields";
     } else {
-        $sql = "SELECT * FROM members WHERE name = '$name' AND password = '$password'";
+        $sql = "SELECT * FROM  userAccount WHERE username = '$username' AND password = '$password'";
         $query = mysql_query($sql);
 
         if ($query === false) {
@@ -15,17 +17,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit;
         }
 
-        if (mysql_num_rows($query) > 0) {
-         
-            header('Location: YOUR_LOCATION');
+        if (mysql_num_rows($query) > 0) { //If they match
+         	
+         	// Start Session
+         	session_start();
+
+         	// Get user type
+         	$query = mysql_fetch_array($query);
+         	$userType = $query['userType'];
+
+         	// Link to different menu page based on user type
+         	if ($userType == 'dbManager'){
+         		$pageLink = 'adminMenu.html';
+         	}
+         	elseif ($userType == 'fieldInvestigator') {
+         		$pageLink = 'FImenu.html';
+         	}
+         	elseif ($userType == 'csAgent') {
+         		$pageLink = 'csAgentMenu.html';
+         	}
+
+         	// Assign session variables
+         	$_SESSION["username"] = $username;
+         	$_SESSION["password"] = $password;
+         	$_SESSION["userType"] = $userType;
+         	$_SESSION["loggedIn"] = 1;
+            
+            // Redirect to respective pages
+            header('Location: '.$pageLink.'');
             exit;
         }
-
+        // Error
         $msg = "Username and password do not match";
     }
 }
 ?>
-
 <!-- Logon Screen for Precision Adjusters Website -->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -42,25 +68,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<div id="header">
 		<div class="section">
 			<div class="logo">
-				<a href="index.php">Precision Adjusters</a>
+				<a href="index.html">Precision Adjusters</a>
 			</div>
-			<ul>
-				<li>
-					<a>User Type</a> <!--Add PHP code to determine --> 
-				</li>
-				<li>
-					<a>User Name</a> <!--Add PHP code to determine --> 
-				</li>
-				<li>
-					<a href="index.php">Logout</a> <!--Add PHP code to determine --> 
-				</li>
-			</ul>
 		</div>
 	</div>
 	<div id="body">
 		<h1>User Login</h1>
 		<div id="logon">
-				<form name="userlogin"action="<?= $_SERVER['PHP_SELF'] ?>" method="post" >
+				<form name="userlogin" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
 					<table class="form" border="0">
 
 						<tr>
@@ -70,8 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						</tr> 
 			
 						<tr>
-							<th><label for="name"><strong>UserName:</strong></label></th>
-							<td><input class="inp-text" name="name" id="name" type="text" size="30" /></td>
+							<th><label for="name"><strong>Username:</strong></label></th>
+							<td><input class="inp-text" name="name" id="username" type="text" size="30" /></td>
 						</tr>
 
 						<tr>
