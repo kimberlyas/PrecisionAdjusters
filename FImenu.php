@@ -1,3 +1,4 @@
+
 <?php include "logon.php";
 
 session_start(); // Start Session
@@ -20,7 +21,10 @@ session_start(); // Start Session
 			</div>
 			<ul>
 				<li>
-					<a>Field Investigator</a> <!--UserType --> 
+					<a><?php if ($_SESSION['userType']) : ?>
+						<?php echo $_SESSION['userType']; ?>
+						<?php endif; ?>
+					</a> <!--UserType --> 
 				</li>
 				<li>
 					<a><?php if ($_SESSION['username']) : ?>
