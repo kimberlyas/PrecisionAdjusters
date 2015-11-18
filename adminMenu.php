@@ -20,7 +20,10 @@ session_start(); // Start Session
 			</div>
 			<ul>
 				<li>
-					<a>Database Manager</a> <!--UserType --> 
+					<a><?php if ($_SESSION['userType']) : ?>
+						<?php echo $_SESSION['userType']; ?>
+						<?php endif; ?>
+					</a> <!--UserType --> 
 				</li>
 				<li>
 					<a><?php if ($_SESSION['username']) : ?>
@@ -48,7 +51,7 @@ session_start(); // Start Session
 				<h1>Main Menu</h1>
 			</div>
 			<div>
-				<a href='#' class='button' id='button1'>Add New User</a>
+				<a href='addNewUser.php' class='button' id='button1'>Add New User</a>
 				<a href='#' class='button' id='button2'>Add and Update Records</a>
 				<a href='#' class='button' id='button3'>Seach and View Records</a>
 			</div>
