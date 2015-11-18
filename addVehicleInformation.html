@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<!-- 6.5.8 Screen 8: Vehicle Information
+Access right: Field Investigator & Database Manager-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Precision Adjusters</title>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">Precision Adjusters</a>
+			</div>
+			<ul>
+				<li>
+					<a>User Type</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a>User Name</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+			<div>
+				<p>
+					<form action = "action_page.php" method = "post">
+						Plate Number <br> <input type = "text" name = "plateNo"> <br><br>
+						Vehicle Identification Number <br> <input type = "text" name = "vin"> <br><br>
+						Model <br> <input type = "text" name = "model"> <br><br>
+						Make <br> <input type = "text" name = "make"> <br><br>
+						Type <br> <input type = "text" name = "type"> <br><br>
+						Year <br> <input type = "text" name = "year"> <br><br>
+						
+						<div>
+						<a href="addOwner.html" class="button" id="addOwner">Owner+</a> 
+						</div>
+						<input type="submit" value="Save">
+					</form>
+				</p>
+			<div>
+	<div>
+	<div id="footer">
+			<p>
+				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
+			</p>
+	</div>
+</body>
+</html>
