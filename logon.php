@@ -4,9 +4,9 @@ session_start(); // Start Session
 
 $msg = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST["username"]; // Get entered username
+    $username = $_POST["username"]; // Get entered username
     $password = md5($_POST["password"]); // Get entered password and encrypt it
-	 if ($name == '' || $password == '') {
+	 if ($username == '' || $password == '') {
         $msg = "You must enter all fields";
     } else {
         $sql = "SELECT * FROM  userAccount WHERE username = '$username' AND password = '$password'";
@@ -27,13 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          	$userType = $query['userType'];
 
          	// Link to different menu page based on user type
-         	if ($userType == 'dbManager'){
+         	if ($userType == 'Database Manager'){
          		$pageLink = 'adminMenu.php';
          	}
-         	elseif ($userType == 'fieldInvestigator') {
+         	elseif ($userType == 'Field Investigator') {
          		$pageLink = 'FImenu.php';
          	}
-         	elseif ($userType == 'csAgent') {
+         	elseif ($userType == 'Customer Service Agent') {
          		$pageLink = 'csAgentMenu.php';
          	}
 
