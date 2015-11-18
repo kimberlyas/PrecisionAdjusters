@@ -1,3 +1,4 @@
+
 <?php include "logon.php";
 
 session_start(); // Start Session
@@ -77,7 +78,7 @@ if ($_POST['newUserSubmit']) {
 ?>
 
 <!DOCTYPE HTML>
-<!-- Add New User Screen for Precision Adjusters Website-->
+<!-- Add New User Screen for Precision Adjusters Website (Database Manager)-->
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -92,7 +93,10 @@ if ($_POST['newUserSubmit']) {
 			</div>
 			<ul>
 				<li>
-					<a>DB Manager</a> <!--UserType --> 
+					<a><?php if ($_SESSION['userType']) : ?>
+						<?php echo $_SESSION['userType']; ?>
+						<?php endif; ?>
+					</a> <!--UserType --> 
 				</li>
 				<li>
 					<a><?php if ($_SESSION['username']) : ?>
@@ -119,62 +123,59 @@ if ($_POST['newUserSubmit']) {
 			<div>
 				<h1></h1>
 			</div>
-			<img id="top" src="top.png" alt="">
-	<div id="form_container">
+			<!--<img id="top" src="top.png" alt="">-->
+			<div id="form_container">
 	
-		<h1><a>Add new user</a></h1>
-		<form id="form_1072598" class="appnitro"  method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+				<h1><a>Add new user</a></h1>
+				<form id="form_1072598" class="appnitro"  method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
 					<div class="form_description">
-		</div>						
-			<ul >
-			
-					<li id="li_1" >
-		<label class="description" for="element_1">Name </label>
-		<span>
-			<input id="element_1_1" name= "element_1_1" class="element text" maxlength="255" size="8" value="<?php
-			 if ($_POST['firstName']) {
-				echo $_POST['firstName']
-			}?>"/>
-			<label>First</label>
-		</span>
-		<span>
-			<input id="element_1_2" name= "element_1_2" class="element text" maxlength="255" size="14" value="<?php
-			 if ($_POST['lastName']) {
-				echo $_POST['lastName']
-			}?>"/>
-			<label>Last</label>
-		</span> 
-		</li>		<li id="li_2" >
-		<label class="description" for="element_2">Password </label>
+							<h2>Add new user</h2>
+							<p></p>
+					</div>						
+							<ul >
+								<li id="li_1" >
+									<label class="description" for="element_1">Name </label>
+									<span>
+										<input id="firstName" name= "element_1_1" class="element text" maxlength="255" size="8" 
+										value="<?php if ($_POST['firstName']) {echo $_POST['firstName']}?>"/>
+										<label>First</label>
+									</span>
+									<span>
+										<input id="lastName" name= "element_1_2" class="element text" maxlength="255" size="14" 
+										value="<?php if ($_POST['lastName']) {echo $_POST['lastName']}?>"/>
+										<label>Last</label>
+									</span> 
+								</li>
+								<li id="li_2" >
+									<label class="description" for="element_2">Password </label>
+									<div>
+										<input id="password" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>
+								<li id="li_3" >
+									<label class="description" for="element_3">Re-Type Password </label>
+									<div>
+										<input id="passsword2" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>
+								<li id="li_4" >
+									<label class="description" for="element_4">User Type </label>
+									<div>
+										<select class="element select medium" id="userType" name="element_4"> 
+											<option value="1" selected="selected">Please select one</option>
+											<option value="2" >Database Manager</option>
+											<option value="3" >Field Investigator</option>
+											<option value="4" >Customer Service Agent</option>
+										</select>
+									</div> 
+								</li>
+								<li class="buttons">
+			    					<input type="hidden" name="form_id" value="1072598" />
+									<input id="newUserSubmit" class="button_text" type="submit" name="submit" value="Submit" />
+								</li>
+							</ul>
+			</form>	
 		<div>
-			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_3" >
-		<label class="description" for="element_3">Re-Type Password </label>
-		<div>
-			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_4" >
-		<label class="description" for="element_4">User Type </label>
-		<div>
-		<select class="element select medium" id="element_4" name="element_4"> 
-			<option value="1" selected="selected">Please select one</option>
-			<option value="2" >Database Manager</option>
-			<option value="3" >Field Investigator</option>
-			<option value="4" >Customer Service Agent</option>
-
-		</select>
-		</div> 
-		</li>
-			
-					<li class="buttons">
-			    <input type="hidden" name="form_id" value="1072598" />
-			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-		</li>
-			</ul>
-		</form>	
-	<div>
 	<div id="footer">
 			<p>
 				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
