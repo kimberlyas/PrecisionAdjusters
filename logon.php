@@ -28,13 +28,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
          	// Link to different menu page based on user type
          	if ($userType == 'dbManager'){
-         		$pageLink = 'adminMenu.html';
+         		$pageLink = 'adminMenu.php';
          	}
          	elseif ($userType == 'fieldInvestigator') {
-         		$pageLink = 'FImenu.html';
+         		$pageLink = 'FImenu.php';
          	}
          	elseif ($userType == 'csAgent') {
-         		$pageLink = 'csAgentMenu.html';
+         		$pageLink = 'csAgentMenu.php';
          	}
 
          	// Assign session variables
