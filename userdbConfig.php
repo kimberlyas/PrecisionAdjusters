@@ -2,7 +2,7 @@
 
 define ("DB_HOST", "localhost"); // set database host
 
-define ("DB_USER", ""); // set MySQL database user
+define ("DB_USER", "root"); // set MySQL database user
 
 define ("DB_PASS",""); // set MySQL database password
 
