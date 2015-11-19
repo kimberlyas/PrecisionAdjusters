@@ -1,3 +1,54 @@
 <!DOCTYPE HTML>
 <!-- 6.5.9 Screen 9: Vehicle Owner
 Access right: Field Investigator & Database Manager-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Precision Adjusters</title>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">Precision Adjusters</a>
+			</div>
+			<ul>
+				<li>
+					<a>User Type</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a>User Name</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+			<div>
+				<p>
+					<h1>Owner's Information</h1>
+					
+					<form action = "actpge_659S9_addVO.php" method = "post" required>
+						First Name <br> <input type = "text" name = "fname" required> <br><br>
+						Middle Name <br> <input type = "text" name = "mname" required> <br><br>
+						Last Name <br> <input type = "text" name = "lname" required> <br><br>
+						TRN <br> <input type = "text" name = "trn" required> <br><br>
+						Policy Number <br> <input type = "text" name = "policyNo" required> <br><br>
+						Insurer <br> <input type = "text" name = "insurer" required> <br><br>
+						
+						<input type="submit" value="Save" name = "addVO_Save">
+					</form>
+				</p>
+			<div>
+	<div>
+	<div id="footer">
+			<p>
+				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
+			</p>
+	</div>
+</body>
+</html>
