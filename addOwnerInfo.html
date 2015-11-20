@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!-- 6.5.9 Screen 9: Vehicle Owner
+Access right: Field Investigator & Database Manager-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>P.A. - Vehicle Owner Information</title>
+	<link rel="stylesheet" href="stylesheet-form.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">Precision Adjusters</a>
+			</div>
+			<ul>
+				<li>
+					<a>User Type</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a>User Name</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+			<div>
+				<p>
+					<h1>Owner's Information</h1>
+					
+					<form name = "ownerinfo" action = "actpge_659S9_addVO.php" method = "post" required>
+						<table class="form" border="0">
+							<tr>
+								<td></td>
+								<td style="color:red;">
+								<?php echo $msg; ?></td>
+							</tr> 
+							<tr>
+								<th><label for="policyNo"><strong>Policy Number</strong></label><br>
+								<input class="inp-text" name="policyNo" id="policyNo" type="text" size="15" required/></th>								
+								<th><label for="lname_ic"><strong>Last Name</strong></label><br>
+								<input class="inp-text" name="lname_ic" id="lname_ic" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="fname_ic"><strong>First Name</strong></label><br>
+								<input class="inp-text" name="fname_ic" id="fname_ic" type="text" size="15" required/></th>								
+								<th><label for="mname_ic"><strong>Middle Name</strong></label><br>
+								<input class="inp-text" name="mname_ic" id="mname_ic" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="dlicense"><strong>Driver's License Number</strong></label><br>
+								<input class="inp-text" name="dlicense" id="dlicense" type="text" size="15" required/></th>								
+								<th><label for="insurer"><strong>Insurer</strong></label><br>
+								<input class="inp-text" name="insurer" id="insurer" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+							<td></td>
+							<td class="save-button-center">
+								<input type="submit" value="Save" name = "addVO_Save">
+							</td>
+							</tr>
+						</table>
+					</form>
+				</p>
+			</div>
+	</div>
+	<div id="footer">
+			<p>
+				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
+			</p>
+	</div>
+</body>
+</html>

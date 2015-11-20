@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!-- 6.5.8 Screen 8: Vehicle Information
+Access right: Field Investigator & Database Manager-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>P.A. - Vehicle Information</title>
+	<link rel="stylesheet" href="stylesheet-form.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="section">
+			<div class="logo">
+				<a href="index.html">Precision Adjusters</a>
+			</div>
+			<ul>
+				<li>
+					<a>User Type</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a>User Name</a> <!--Add PHP code to determine --> 
+				</li>
+				<li>
+					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+			<div>
+				<p>
+					<h1>Vehicle Information</h1>
+					
+					<form name = "vehinfo" action = "actpge_658S8_addVI.php" method = "post">
+						<table class="form" border="0">
+							<tr>
+								<td></td>
+								<td style="color:red;">
+								<?php echo $msg; ?></td>
+							</tr> 
+							<tr>
+								<th><label for="vin"><strong>Vehicle Identification Number</strong></label><br>
+								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>								
+								<th><label for="plateNo"><strong>Plate Number</strong></label><br>
+								<input class="inp-text" name="plateNo" id="plateNo" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="type"><strong>Type</strong></label><br>
+								<input class="inp-text" name="type" id="type" type="text" size="15" required/></th>								
+								<th><label for="make"><strong>Make</strong></label><br>
+								<input class="inp-text" name="make" id="make" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="model"><strong>Model</strong></label><br>
+								<input class="inp-text" nassme="model" id="model" type="text" size="15" required/></th>								
+								<th><label for="year"><strong>Year</strong></label><br>
+								<input class="inp-text" name="year" id="year" type="text" size="15" required/></th>								
+							</tr>
+<tr>
+								<th><label for="damages"><strong>Damage Description</strong></label><br>
+								<input class="inp-text" name="damages" id="damages" type="textarea" required/></th>
+								<th><div><a href="addOwner.html" class="button" id="addOwner">Owner</a></div></th>
+							</tr>
+							<tr>
+							<td></td>
+							<td class="save-button-center">
+								<input type ="submit" value ="Save" name = "addVI_Save">
+							</td>
+							</tr>
+						</table>
+					</form>
+				</p>
+			</div>
+	</div>
+	<div id="footer">
+			<p>
+				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
+			</p>
+	</div>
+</body>
+</html>
