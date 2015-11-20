@@ -181,6 +181,7 @@ table.form label.email { border-bottom: 1px dotted #000000; }
 
 
 .save_bt {
+	float: center;
 
     background: none repeat scroll 0 0 #0D92E1;
 
