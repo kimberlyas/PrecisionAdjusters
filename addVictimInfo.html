@@ -6,7 +6,7 @@
 	<title>P.A. Add Record</title>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
-	<link rel="stylesheet" href="add-record.css" type="text/css">
+	<link rel="stylesheet" href="addAI.css" type="text/css">
 </head>
 <body>
 	<div id="header">
@@ -30,7 +30,7 @@
 	<div id="body">
 		<h1>Victim's Information</h1>
 		<div id="logon">
-				<form name="addrecord" action=login.php" method="post">
+				<form name="addrecord" action=addVictimInfo.php" method="POST">
 					<table class="form" border="0">
 
 						<tr>
@@ -40,48 +40,37 @@
 						</tr> 
 			
 						<tr>
-							<th><label for="fname"><strong> First Name</strong></label> <br>
-							<input class="inp-text" name="fname" id="fname" type="text" size="15" /></th>
-							<th><label for="trn"><strong> TRN </strong></label> <br>
-							<input class="inp-text" name="trn" id="trn" type="text" size="15" /></th>
+							<th>FIRST NAME <br> <input type="text" name="FNAME" size="15" /></th>
+							<th>TRN <br> <input type="text" name="TRN" size="30" /></th>
 							<th><label>Mortal Status</label> <br>
-             				<select id = "mStatus"> 
-               				<option value = "Alive">Alive</option>
-               				<option value = "Dead">Deceased</option>
+             				<select name = "mStatus"> 
+               				<option value = "Alive" size="15">Alive</option>
+               				<option value = "Dead" size="15">Deceased</option>
              				</select> </th>
 						</tr>
 
 						<tr>
-							<th><label for="mname"><strong> Middle Name </strong></label> <br> 
-							<input class="inp-text" name="mname" id="mname" type="text" size="15" /> </th>
-							<th><label for="address"><strong> Address </strong></label> <br>
-							<input class="inp-text" name="address" id="address" type="text" size="15" /></th>
-							<th><label for="hnumber"><strong> Home Number </strong></label> <br>
-							<input class="inp-text" name="hnumber" id="hnumber" type="text" size="15" /></th>
+							<th>MIDDLE NAME <br> <input type="text" name="MNAME" size="15" /></th>
+							<th>ADDRESS <br> <input type="text" name="ADDRESS" size="30"/></th>
+							<th>HOME NUMBER <br> <input type="text" name="HNUMBER" size="15"/></th>
 						</tr>
 						
 						<tr>
-							<th><label for="lname"><strong> Last Name </strong></label> <br> 
-							<input class="inp-text" name="lname" id="lname" type="text" size="15" /> </th>
-							<th><label for="email"><strong> Email </strong></label> <br>
-							<input class="inp-text" name="email" id="email" type="text" size="15" /></th>
-							<th><label for="wnumber"><strong> Work Number </strong></label> <br>
-							<input class="inp-text" name="wnumber" id="wnumber" type="text" size="15" /></th>
-						</tr>
+							<th>LAST NAME <br> <input type="text" name="LNAME" size="15" /></th>
+							<th>EMAIL ADDRESS <br> <input type="text" name="EMAIL" size="30"/></th>
+							<th>WORK NUMBER <br> <input type="text" name="WNUMBER" size="15"/></th>
 						
 						<tr>
-							<th><label for="dob"><strong> Date Of Birth </strong></label> <br> 
-							<input class="inp-text" name="dob" id="dob" type="text" size="15" /> </th>
-							<th><label for="occupation"><strong> Occupation </strong></label> <br> 
-							<input class="inp-text" name="occupation" id="occupation" type="text" size="15" /> </th>
-							<th><label for="cnumber"><strong> Cell Number </strong></label> <br>
-							<input class="inp-text" name="cnumber" id="cnumber" type="text" size="15" /></th>
+							<th>DATE OF BIRTH <br> <input type="text" name="DOB" size="15" /></th>
+							<th>OCCUPATION <br> <input type="text" name="OCCUPATION" size="30"/></th>
+							<th>CELL NUMBER <br> <input type="text" name="CNUMBER" size="15"/></th>
+							
 						</tr>
 
 						<tr>
 							<td></td>
 							<td class="save-button-center">
-							<input class="button" type="button" value="Save" name="Save" />
+							<input class="button" type="submit" value="Submit"/>
 							</td>
 						</tr>
 

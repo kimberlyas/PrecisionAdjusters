@@ -129,7 +129,7 @@ body {
 
 
 
-table.form { margin-left: 100px; margin-top: 0px; border-collapse: collapse; border: 1px solid #DDDDDD; }
+table.form { margin-left: 100px; margin-top: 0px; border-collapse: collapse; border: 3px solid #DDDDDD; }
 
 
 
@@ -203,3 +203,19 @@ table.form label.email { border-bottom: 1px dotted #000000; }
 
 }
 
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 58px;
+    border: 3px solid #b3b3b3;
+    border-radius: 32px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b3b3b3));
+    background: -moz-linear-gradient(top, #ffffff, #b3b3b3);
+    background: linear-gradient(to bottom, #ffffff, #b3b3b3);
+    text-shadow: #ffffff 1px 1px 1px;
+    font: normal normal bold 20px trebuchet ms;
+    color: #111111;
+    text-decoration: none;
+}
