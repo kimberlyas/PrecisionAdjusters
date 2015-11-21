@@ -1,15 +1,13 @@
 /*CSS Template for Precision Adjusters*/
 
 body {
-	background: #ededed url(bg-header.gif) repeat-x top center;
+	background: #ededed url(https://googledrive.com/host/0B3zmJAfIk6jvVzZ5dTc1VDdHNlU) repeat-x top center;
 	line-height: 1;
 	font-size: 14px;
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 }
-
-
 #header {
 	margin: 0 auto;
 	padding: 0;
@@ -28,7 +26,7 @@ body {
 
 }
 #header .section .logo a {
-	background: url(bg-logo.png) repeat-x top left;
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvenVHT1lQQzg1U3M) repeat-x top left;
 	color: #fff;
 	display: block;
 	font-family: 'Cambria';
@@ -50,7 +48,7 @@ body {
 	padding: 114px 0 0;
 }
 #header .section ul li {
-	background: url(bg-nav-right.gif) no-repeat top right;
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvTk9nVXMzdXQyZDQ) no-repeat top right;
 	display: inline-block;
 	float: left;
 	list-style: none;
@@ -58,7 +56,7 @@ body {
 	padding: 0;
 }
 #header .section ul li a {
-	background: url(bg-nav-left.gif) no-repeat top left;
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvZHF0QUk1SnV0Mmc) no-repeat top left;
 	color: #fff;
 	display: inline-block;
 	font-size: 16px;
@@ -75,10 +73,10 @@ body {
 	color: #ccc;
 }
 #header .section ul li.selected {
-	background: url(bg-nav-right-selected.gif) no-repeat top right;
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvc1VZNkRPeTZnMFk) no-repeat top right;
 }
 #header .section ul li.selected a {
-	background: url(bg-nav-left-selected.gif) no-repeat top left;
+	background: url(https://googledrive.com/host/0B3zmJAfIk6jvb2xVNkxkekxYb0k) no-repeat top left;
 }
 
 #body {
@@ -94,10 +92,6 @@ body {
 	line-height: 24px;
 	margin: 0;
 	padding: 30px 10px;
-}
-
-#body h1{
-	text-align: right;
 }
 
 
@@ -122,10 +116,6 @@ body {
 }
 
 
-/* ==================== Form style sheet ==================== */
-
-
-
 table.form { margin-left: 100px; margin-top: 0px; border-collapse: collapse; border: 1px solid #DDDDDD; }
 
 
@@ -147,55 +137,3 @@ table.form input { width: 340px; }
 table.form input.answer { width: 53px; }
 
 table.form textarea { width: 400px; height: 160px; }
-
-
-
-table.form input.inp-text, table.form input.answer, table.form textarea
-
-{ border: 1px solid #909090; padding: 2px; }
-
-
-
-table.form th.message-up { vertical-align: top !important; }
-
-
-
-table.form label.invisible { visibility: hidden; }
-
-
-
-table.form td.submit-button-right { text-align: right !important; }
-
-table.form input.submit-text { font: 1.4em Georgia, "Times New Roman", Times, serif; letter-spacing: 1px; width: auto; }
-
-
-
-table.form label.email { border-bottom: 1px dotted #000000; }
-
-
-
-/* ==================== Form style sheet END ==================== */
-
-
-.save_bt {
-
-    background: none repeat scroll 0 0 #0D92E1;
-
-    border: medium none;
-
-    color: #FFFFFF;
-
-    cursor: pointer;
-
-    font: bold 15px/43px Arial,Helvetica,sans-serif;
-
-    text-align: center;
-
-    height: 35px;
-
-    width: 100px !important;
-
-	padding: 5px 15px 5px 15px;
-
-}
-

@@ -1,8 +1,7 @@
 <?php
-    define('DB_NAME', 'virtualWalkLog');
-    define('DB_USER', 'root');
-    define('DB_PASSWORD', 'root');
-    define('DB_HOST', 'localhost');
+    $db = mysql_connect(“localhost”, “user”);
+    Mysql_select_db(“PA_Database”);
+
 
     $link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
@@ -29,7 +28,7 @@
          $dob = $_POST['DOB'];
          $occupation = $_POST['OCCUPATION'];
          $cnumber = $_POST['cnumber'];
-         $sql = "INSERT into VictimInfo (trn, lname_acc, fname_acc, mname, address1_acc, address2_acc, email, home, cell, work, dob, occupation, mortalStatus) values ($trn, $lname, $fname, $mname, $address, $email, $hnumber, $cnumber, $wnumber, $dob, $occupation, $mStatus)";
+         $sql = "INSERT into victim_accinfo (trn, lname_acc, fname_acc, mname, address1_acc, address2_acc, email, home, cell, work, dob, occupation, mortalStatus) values ($trn, $lname, $fname, $mname, $address, $email, $hnumber, $cnumber, $wnumber, $dob, $occupation, $mStatus)";
    		 
    		 $result = mysql_query($sql);
     }
