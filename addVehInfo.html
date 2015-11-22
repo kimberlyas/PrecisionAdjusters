@@ -75,7 +75,42 @@ Access right: Field Investigator & Database Manager-->
 		<div class="main-wrap">
 			<div class="container">
 				<div class="pos-wrap">
-				
+					<form name = "vehinfo" action = "actpge_658S8_addVI.php" method = "post">
+						<table class="form" border="0">
+							<tr>
+								<th><label for="vin"><strong>Vehicle Identification Number</strong></label><br>
+								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>								
+								<th><label for="plateNo"><strong>Plate Number</strong></label><br>
+								<input class="inp-text" name="plateNo" id="plateNo" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="type"><strong>Type</strong></label><br>
+								<input class="inp-text" name="type" id="type" type="text" size="15" required/></th>								
+								<th><label for="make"><strong>Make</strong></label><br>
+								<input class="inp-text" name="make" id="make" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="model"><strong>Model</strong></label><br>
+								<input class="inp-text" name="model" id="model" type="text" size="15" required/></th>								
+								<th><label for="year"><strong>Year</strong></label><br>
+								<input class="inp-text" name="year" id="year" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="damages"><strong>Damage Description</strong></label><br>
+								<input name="damages" id="damages" type="textarea" required/></th>
+								<th><label for="accidentNo"><strong>Accident Number</strong></label><br>
+								<input class="inp-text" name="accidentNo" id="accidentNo" type="text" required/></th>
+								
+								<th><div><a href="addOwnerInfo.html" class="button" id="addOwner">Add Owner</a></div></th>
+							</tr>
+							<tr>
+							<td></td>
+							<td>
+								<div id = "center-save"><input type ="submit" value ="Save" name = "addVI_Save" id = "addVI_Save"></div>
+							</td>
+							</tr>
+						</table>
+					</form>	
 				</div>
 			</div>
 		</div><!-- End of main wrap -->
