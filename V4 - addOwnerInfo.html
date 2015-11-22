@@ -3,12 +3,15 @@ session_start(); // Start Session
 ?>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
 
 <!DOCTYPE html>-->
+<!-- 6.5.9 Screen 9: Vehicle Owner
+Access right: Field Investigator & Database Manager-->
 
 <html>
 <head>
 	<title>Precision Adjusters</title>
 	<link rel="stylesheet" type="text/css" href="page_basic.css" /> 
 	<link rel="stylesheet" type="text/css" href="page_form.css" /> 
+	<link rel="stylesheet" type="text/css" href="page_button.css" /> 
 	<script type="text/javascript" src="menubar.js"></script>
 </head>
 <body>
@@ -31,7 +34,7 @@ session_start(); // Start Session
 		<div class="banner-wrap">
 			<div class="container">
 				<div class="banner">
-					<br><br><span>Welcome Something works</span> <!--Title of Current Interface>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
+					<br><br><span>Owner Information</span> 
 				</div>
 			</div>
 		</div><!-- End of banner-wrap -->
@@ -72,11 +75,42 @@ session_start(); // Start Session
 		<div class="main-wrap">
 			<div class="container">
 				<div class="pos-wrap">
-				
+					<form name = "ownerinfo" action = "actpge_659S9_addVO.php" method = "post">
+						<table class="form" border="0">
+							<tr>
+								<th><label for="policyNo"><strong>Policy Number</strong></label><br>
+								<input class="inp-text" name="policyNo" id="policyNo" type="text" size="15" required/></th>								
+								<th><label for="lname_ic"><strong>Last Name</strong></label><br>
+								<input class="inp-text" name="lname_ic" id="lname_ic" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="fname_ic"><strong>First Name</strong></label><br>
+								<input class="inp-text" name="fname_ic" id="fname_ic" type="text" size="15" required/></th>								
+								<th><label for="mname_ic"><strong>Middle Name</strong></label><br>
+								<input class="inp-text" name="mname_ic" id="mname_ic" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="dlicense"><strong>Driver's License Number</strong></label><br>
+								<input class="inp-text" name="dlicense" id="dlicense" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="icname"><strong>Insurer</strong></label><br>
+								<input class="inp-text" name="icname" id="icname" type="text" size="15" required/></th>	
+								<th><label for="vin"><strong>Vehicle Identification Number</strong></label><br>
+								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>
+							</tr>
+							<tr>
+							<td></td>
+							<td>
+								<div id = "center-save"><input type ="submit" value ="Save" name = "addVO_Save" id = "addVO_Save"></div>
+							</td>
+							</tr>
+						</table>
+					</form>				
 				</div>
 			</div>
 		</div><!-- End of main wrap -->
-		<div class="footer"><span>&copy; Copyright 2015 | Precision Adjusters | All rights reserved.</span></div>
+		<div class="footer"><span>Copyright &copy 2015 Precision Adjusters</span></div>
 	</div>
 </body>
 </html>
