@@ -17,11 +17,12 @@
 
     if (isset($_POST['Save'])) {
          $loc = $_POST['location'];
-       	 $td = $_POST['t_date'];
+       	 $date = $_POST['date'];
+       	 $time = $_POST['time'];
          $wState = $_POST['wState'];
          $desc = $_POST['sDesc'];
-         $sql = "INSERT into accinfo (accidentNo, location, datetime, eyeWitnessDetails, sceneDescription) values ($aInfo, $loc, $td, $wState, $desc)";
-   		 
+         $sql = "INSERT into accinfo (accidentNo, location, time, date, eyeWitnessDetails, sceneDescription) values ($aInfo, $loc, $time, $date, $wState, $desc)";
+         
    		 $result = mysql_query($sql);
     }
 ?>

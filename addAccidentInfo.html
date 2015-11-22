@@ -6,7 +6,11 @@
 	<title>P.A. Add Record</title>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
-	<link rel="stylesheet" href="addAI.css" type="text/css">
+	<!--<link rel="stylesheet" type="text/css" href="page_basic.css" /> -->
+	<!--<link rel="stylesheet" type="text/css" href="page_form.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="page_form-position.css" /> <!--Test????????????????????????????????????????????????????????--> -->
+	<!--<link rel="stylesheet" type="text/css" href="page_button.css" /> -->
+	<!--<script type="text/javascript" src="menubar.js"></script>-->
 </head>
 <body>
 	<div id="header">
@@ -29,6 +33,7 @@
 	</div>
 	<div id="body">
 		<h1>Accident Information</h1>
+		<div><span> Accident Number.: </span> <?php echo mysql_num_rows(SELECT * FROM accinfo) + 1; ?> </div>
 		<div id="logon">
 				<form name="addaccident" action=addAI.php" method="post">
 					<table class="form" border="0">
@@ -42,8 +47,10 @@
 						<tr>
 							<th><label for="location"><strong> Location </strong></label> <br>
 							<input class="inp-text" name="location" id="location" type="text" size="15" /></th>
-							<th><label for="t_date"><strong> Time and Date </strong></label> <br>
-							<input class="inp-text" name="t_date" id="t_date" type="text" size="15" /></th>
+							<th><label for="t_date"><strong> Date </strong></label> <br>
+							<input class="inp-text" name="date" id="date" type="text" size="15" /> <br> 
+							<label for="time"><strong> Time </strong></label> <br>
+							<input class="inp-text" name="time" id="time" type="text" size="15" /></th>
 						</tr>
 
 						<tr>

@@ -20,7 +20,8 @@
        	 $trn = $_POST['TRN'];
          $mStatus = $_POST['MSTATUS'];
          $mname = $_POST['MNAME'];
-         $address = $_POST['ADDRESS'];
+         $address1 = $_POST['ADDRESS1'];
+         $address2 = $_POST['ADDRESS2'];
          $hnumber = $_POST['NUMBER'];
          $lname = $_POST['LNAME'];
          $email = $_POST['EMAIL'];
