@@ -6,7 +6,8 @@ Access right: Field Investigator & Database Manager-->
 <head>
 	<meta charset="UTF-8">
 	<title>P.A. - Vehicle Owner Information</title>
-	<link rel="stylesheet" href="stylesheet-form.css" type="text/css">
+	<link rel="stylesheet" href="ss-basic.css" type="text/css">
+	<link rel="stylesheet" href="ss-form.css" type="text/css">
 </head>
 <body>
 	<div id="header">
@@ -35,11 +36,6 @@ Access right: Field Investigator & Database Manager-->
 					<form name = "ownerinfo" action = "actpge_659S9_addVO.php" method = "post" required>
 						<table class="form" border="0">
 							<tr>
-								<td></td>
-								<td style="color:red;">
-								<?php echo $msg; ?></td>
-							</tr> 
-							<tr>
 								<th><label for="policyNo"><strong>Policy Number</strong></label><br>
 								<input class="inp-text" name="policyNo" id="policyNo" type="text" size="15" required/></th>								
 								<th><label for="lname_ic"><strong>Last Name</strong></label><br>
@@ -54,13 +50,17 @@ Access right: Field Investigator & Database Manager-->
 							<tr>
 								<th><label for="dlicense"><strong>Driver's License Number</strong></label><br>
 								<input class="inp-text" name="dlicense" id="dlicense" type="text" size="15" required/></th>								
-								<th><label for="insurer"><strong>Insurer</strong></label><br>
-								<input class="inp-text" name="insurer" id="insurer" type="text" size="15" required/></th>								
+							</tr>
+							<tr>
+								<th><label for="icname"><strong>Insurer</strong></label><br>
+								<input class="inp-text" name="icname" id="icname" type="text" size="15" required/></th>	
+								<th><label for="vin"><strong>Vehicle Identification Number</strong></label><br>
+								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>
 							</tr>
 							<tr>
 							<td></td>
-							<td class="save-button-center">
-								<input type="submit" value="Save" name = "addVO_Save">
+							<td>
+								<div id = "center-save"><input type ="submit" value ="Save" name = "addVO_Save" id = "addVO_Save"></div>
 							</td>
 							</tr>
 						</table>

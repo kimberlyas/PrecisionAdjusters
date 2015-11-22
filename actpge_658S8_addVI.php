@@ -1,5 +1,4 @@
 <?php 
-    include "logon.php";
 	include dbaccess.php;    
 
 	if(isset($_POST['addVI_Save'])){
@@ -10,14 +9,14 @@
 		$model = $_POST['model']; //Model <br> <input type = "text" name = "model"> <br><br>        
         $year = $_POST['year']; //Year <br> <input type = "text" name = "year"> <br><br>
         $damages = $_POST['damages']; //Damage Description <br> <input type = "textarea" name = "damages"> <br><br>
+        $accidentNo = $_POST['accidentNo']; //Accident Number <br> <input type = "text" name = "accidentNo"> <br><br>
         
-        //INSERT INTO table_name (column1, column2, column3) VALUES ('value1', 'value2', 'value3');
-		$dbqVI = "INSERT INTO vehicle_accinfo (vin,plateNo,type,make,model,year,damages) VALUES ($vin,$plateNo,$type,$make,$model,$year,$damages)";
-		$query = mysql_query($dbqVI);
+		$sql1_VI = "INSERT INTO vehicle_accinfo VALUES ($vin,$plateNo,$type,$make,$model,$year,$damages,$accidentNo)";
+		$q1VI = mysql_query($sql1_VI);
 
-		if ($query === false) {
-            	echo "Could not successfully run query ($dbqVI) from DB ($database): " . mysql_error();
-            	exit;
-        }
+		if(!$q1VI){
+		    echo "Could not successfully run query ($sql1_VI) from DB ($database): " . mysql_error();
+            exit;
+		}
     }
 ?>

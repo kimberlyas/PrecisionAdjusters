@@ -36,11 +36,6 @@ Access right: Field Investigator & Database Manager-->
 					<form name = "vehinfo" action = "actpge_658S8_addVI.php" method = "post">
 						<table class="form" border="0">
 							<tr>
-								<td></td>
-								<td style="color:red;">
-								<?php echo $msg; ?></td>
-							</tr> 
-							<tr>
 								<th><label for="vin"><strong>Vehicle Identification Number</strong></label><br>
 								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>								
 								<th><label for="plateNo"><strong>Plate Number</strong></label><br>
@@ -54,19 +49,22 @@ Access right: Field Investigator & Database Manager-->
 							</tr>
 							<tr>
 								<th><label for="model"><strong>Model</strong></label><br>
-								<input class="inp-text" nassme="model" id="model" type="text" size="15" required/></th>								
+								<input class="inp-text" name="model" id="model" type="text" size="15" required/></th>								
 								<th><label for="year"><strong>Year</strong></label><br>
 								<input class="inp-text" name="year" id="year" type="text" size="15" required/></th>								
 							</tr>
-<tr>
+							<tr>
 								<th><label for="damages"><strong>Damage Description</strong></label><br>
-								<input class="inp-text" name="damages" id="damages" type="textarea" required/></th>
-								<th><div><a href="addOwner.html" class="button" id="addOwner">Owner</a></div></th>
+								<input name="damages" id="damages" type="textarea" required/></th>
+								<th><label for="accidentNo"><strong>Accident Number</strong></label><br>
+								<input class="inp-text" name="accidentNo" id="accidentNo" type="text" required/></th>
+								
+								<th><div><a href="addOwnerInfo.html" class="button" id="addOwner">Owner</a></div></th>
 							</tr>
 							<tr>
 							<td></td>
-							<td class="save-button-center">
-								<input type ="submit" value ="Save" name = "addVI_Save">
+							<td>
+								<div id = "center-save"><input type ="submit" value ="Save" name = "addVI_Save" id = "addVI_Save"></div>
 							</td>
 							</tr>
 						</table>
