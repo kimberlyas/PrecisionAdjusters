@@ -1,6 +1,15 @@
-<?php include "userdbConfig.php";
+<?php //include "userdbConfig.php";
 
 session_start(); // Start Session
+
+//session_id('PrecisionAdjusters'); //SET id first before calling  session start
+
+//session_save_path('/htdocs/'); // Save session data location
+
+// Get session's timezone
+$timezone = date_default_timezone_get();
+date_default_timezone_set($timezone);
+
 
 $msg = "";
 // Submit button
@@ -40,12 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
          	// Assign session variables
          	$_SESSION["username"] = $username;
-         	$_SESSION["password"] = $password;
          	$_SESSION["userType"] = $userType;
-   
-
+   			
+         	// Get current date
+    		$date = date('Y-m-d H:i:s');
+         	
          	// Update database
-         	$mysql = "UPDATE userAccount SET loggedIn=1 WHERE user = '$username' AND pass = '$password'";
+         	$mysql = "UPDATE userAccount SET loggedIn=1, log=$date WHERE user = '$username'";
          	$result = mysql_query($mysql,$link);
 
          	//Check that it was updated
@@ -86,6 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				<input type="text" placeholder="username" name="username"><br>
 				<input type="password" placeholder="password" name="password"><br>
 				<input type="submit" value="Login">
+				<div style="color:blue;"><a href='#'><br>Forgot Username/Password?</a></div> 
 			</div>
 		</form>
 		<!-- End of main wrap -->
