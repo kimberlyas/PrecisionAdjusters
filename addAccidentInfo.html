@@ -1,84 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<?php include "logon.php";
+session_start(); // Start Session
+?>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
+
+<!DOCTYPE html>-->
+<!-- 6.5.9 Screen 9: Vehicle Owner
+Access right: Field Investigator & Database Manager-->
+
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta charset="UTF-8">
-	<title>P.A. Add Record</title>
-	<meta name="description" content=""/>
-	<meta name="keywords" content=""/>
-	<!--<link rel="stylesheet" type="text/css" href="page_basic.css" /> -->
-	<!--<link rel="stylesheet" type="text/css" href="page_form.css" />-->
-	<!--<link rel="stylesheet" type="text/css" href="page_form-position.css" /> <!--Test????????????????????????????????????????????????????????--> -->
-	<!--<link rel="stylesheet" type="text/css" href="page_button.css" /> -->
-	<!--<script type="text/javascript" src="menubar.js"></script>-->
+	<title>Precision Adjusters</title>
+	<link rel="stylesheet" type="text/css" href="page_basic.css" /> 
+	<link rel="stylesheet" type="text/css" href="page_form.css" />
+	<link rel="stylesheet" type="text/css" href="page_form-position.css" /> <!--Test????????????????????????????????????????????????????????--> 
+	<link rel="stylesheet" type="text/css" href="page_button.css" /> 
+	<script type="text/javascript" src="menubar.js"></script>
 </head>
 <body>
-	<div id="header">
-		<div class="section">
-			<div class="logo">
-				<a href="index.html">Precision Adjusters</a> <!-- Main menu -->
+	<div class="page">
+		<div class="header">
+			<div class="topbar">
+				<label id="label">
+					<span>
+						<span>Menu</span>
+					</span>
+				</label>
+				<div id="logo"> 
+					<span>
+						<span><img src="Company Logo.png" style="padding-top: 10px"></img></span>
+					</span>
+				</div>
+			</div><!--End of topbar-->
+		</div><!--End of header-->
+		
+		<div class="banner-wrap">
+			<div class="container">
+				<div class="banner">
+					<br><br><span>Accident Information</span> 
+				</div>
 			</div>
-			<ul>
-				<li>
-					<a>User Type</a> <!--Add PHP code to determine --> 
-				</li>
-				<li>
-					<a>User Name</a> <!--Add PHP code to determine --> 
-				</li>
-				<li>
-					<a href="index.html">Logout</a> <!--Add PHP code to determine --> 
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div id="body">
-		<h1>Accident Information</h1>
-		<div><span> Accident Number.: </span> <?php echo mysql_num_rows(SELECT * FROM accinfo) + 1; ?> </div>
-		<div id="logon">
-				<form name="addaccident" action=addAI.php" method="post">
-					<table class="form" border="0">
+		</div><!-- End of banner-wrap -->
+		
+		<div id="nav-wrap" style="overflow: hidden">
+			<div class="container">
+				<div class="desktop-nav">
+					<ul>
+						<li>
+							User Type 
+							<!--<a><?php if ($_SESSION['userType']) : ?>
+							<?php echo $_SESSION['userType']; ?>
+							<?php endif; ?></a>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
+						</li>
+						<li>
+							User Name 
+							<!--<a><?php if ($_SESSION['username']) : ?>
+							<?php echo $_SESSION['username']; ?>
+							<?php endif; ?></a>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
+						</li>		
+						<li>
+							Logout 
+							<!--<a href="logon.php?id=0">Logout
+							<?php if ($_GET['id'] == 0) {
+							if(isset($_SESSION['username']))
+								unset($_SESSION['username']);
+							if(isset($_SESSION['password']))
+								unset($_SESSION['password']);
+							if(isset($_SESSION['loggedIn']))
+								unset($_SESSION['loggedIn']);
+							session_destroy();}?></a><!--Logout --><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
+						</li>	
+					</ul>
+				</div>
+			</div>
+		</div><!-- End of nav-bar -->
+		
+		<div class="main-wrap">
+			<div class="container">
+				<div class="pos-wrap">
+					<form name="addaccident" action=addAI.php" method="post">
+						<table class="form" border="0">
+	
+							<tr>
+								<td></td>
+								<td style="color:red;">
+								<?php echo $msg; ?></td>
+							</tr> 
+				
+							<tr>
+								<th><label for="location"><strong> Location </strong></label> <br>
+								<input class="inp-text" name="location" id="location" type="text" size="15" /></th>
+								<th><label for="date"><strong> Date </strong></label> <br>
+								<input class="inp-text" name="date" id="date" type="text" size="15" /> <br> 
+								<label for="time"><strong> Time </strong></label> <br>
+								<input class="inp-text" name="time" id="time" type="text" size="15" /></th>
+							</tr>
 
-						<tr>
-							<td></td>
-							<td style="color:red;">
-							<?php echo $msg; ?></td>
-						</tr> 
-			
-						<tr>
-							<th><label for="location"><strong> Location </strong></label> <br>
-							<input class="inp-text" name="location" id="location" type="text" size="15" /></th>
-							<th><label for="t_date"><strong> Date </strong></label> <br>
-							<input class="inp-text" name="date" id="date" type="text" size="15" /> <br> 
-							<label for="time"><strong> Time </strong></label> <br>
-							<input class="inp-text" name="time" id="time" type="text" size="15" /></th>
-						</tr>
-
-						<tr>
-							<th><label for="wState"><strong> Witness Statement </strong></label> <br> 
-							<input class="inp-text" name="wState" id="wState" type="text" size="50" /> </th>
-							<th><label for="sDesc"><strong> Scene Description </strong></label> <br>
-							<input class="inp-text" name="sDesc" id="sDesc" type="text" size="50" /></th>
+							<tr>
+								<th><label for="wState"><strong> Witness Statement </strong></label> <br> 
+								<input class="inp-text" name="wState" id="wState" type="text" size="50" /> </th>
+								<th><label for="sDesc"><strong> Scene Description </strong></label> <br>
+								<input class="inp-text" name="sDesc" id="sDesc" type="text" size="50" /></th>
 						
-						<tr>
-							<th> 
-								<input class="button" type="button" value="Add Victim Information + " name="addVictim " />
-							</th>
-							<th>
-								<input class="button" type="button" value="Add Vehicle Information + " name="addVehicle" />
-							</th>
-						</tr>
-					</table>
-					
-					<p align=center>
-								<input class="button" type="button" name="newRecord" value="Submit New Record" />
-					</p>
-				</form>
-		<div>
-	<div>
-	<div id="footer">
-			<p>
-				&copy; Copyright 2015 | Precision Adjusters | All rights reserved.
-			</p>
+							<tr>
+								<th>
+									<div id="center-save"><input type ="submit" value ="Add Victim Information + " name = "addAI_Save" id = "addAI_Save"></div>
+								</th>
+								<th>
+									<div id="center-save"><input type ="submit" value ="Add Vehicle Information + " name = "addAI_Save" id = "addAI_Save"></div>
+								</th>
+							</tr>
+							
+							<tr>
+							<td></td>
+							<td>
+								<div id="center-save"><input type ="submit" value ="Submit New Record" name = "addAI_Save" id = "addAI_Save"></div>
+							</td>
+							</tr>
+						</table>
+					</form>				
+				</div>
+			</div>
+		</div><!-- End of main wrap -->
+		<div class="footer"><span>&copy; Copyright 2015 | Precision Adjusters | All rights reserved.</span></div>
 	</div>
 </body>
 </html>
