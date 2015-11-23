@@ -28,7 +28,7 @@ Access right: Field Investigator & Database Manager-->
 					<span>
 						<span><img src="Company Logo.png" style="padding-top: 10px"></img></span>
 					</span>
-				</div><!--End of label-->
+				</div>
 			</div><!--End of topbar-->
 		</div><!--End of header-->
 		
@@ -36,47 +36,28 @@ Access right: Field Investigator & Database Manager-->
 			<div class="container">
 				<div class="banner">
 					<br><br><span>Owner Information</span> 
-				</div><!--End of banner-->
-			</div><!--End of container-->
+				</div>
+			</div>
 		</div><!-- End of banner-wrap -->
 		
 		<div id="nav-wrap" style="overflow: hidden">
 			<div class="container">
 				<div class="desktop-nav">
 					<ul>
-						<li> Home
-							<!--<a href="
-							<?php 
-								if (isset($_SESSION["userType"]))
-								{
-									// Link to different menu page based on user type
-         							if ($_SESSION["userType"] == 'Database Manager'){
-         								$homeLink = 'adminMenu.php';
-         							}
-         							elseif ($_SESSION["userType"] == 'Field Investigator') {
-         								$homeLink = 'FImenu.php';
-         							}
-         							elseif ($_SESSION["userType"] == 'Customer Service Agent') {
-         								$homeLink = 'csAgentMenu.php';
-         							}
-
-         							echo $homeLink;
-								}
-							?>">
-								Home
-					 		</a>--><!--Home (Redirects to respesctive Main Menu screen based on logged in User's type) -->
-						</li>	
-						<li> User Type 
+						<li>
+							User Type 
 							<!--<a><?php if ($_SESSION['userType']) : ?>
 							<?php echo $_SESSION['userType']; ?>
 							<?php endif; ?></a>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
 						</li>
-						<li> User Name 
+						<li>
+							User Name 
 							<!--<a><?php if ($_SESSION['username']) : ?>
 							<?php echo $_SESSION['username']; ?>
 							<?php endif; ?></a>--><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
 						</li>		
-						<li> Logout 
+						<li>
+							Logout 
 							<!--<a href="logon.php?id=0">Logout
 							<?php if ($_GET['id'] == 0) {
 							if(isset($_SESSION['username']))
@@ -88,8 +69,8 @@ Access right: Field Investigator & Database Manager-->
 							session_destroy();}?></a><!--Logout --><!--Php functionality to be added when linking to login?????????????????????????????????????????????????????????-->
 						</li>	
 					</ul>
-				</div><!-- End of desktop-bar -->
-			</div><!--End of container-->
+				</div>
+			</div>
 		</div><!-- End of nav-bar -->
 		
 		<div class="main-wrap">
@@ -127,13 +108,20 @@ Access right: Field Investigator & Database Manager-->
 								<input class="inp-text" name="vin" id="vin" type="text" size="15" required/></th>
 							</tr>
 							<tr></tr>
+							<!--<tr>
+								<td></td>
+								<td>
+									<div id = "center-save"><input type ="submit" value ="Save" name = "addVO_Save" id = "addVO_Save"></div>
+								</td>
+								<td></td>
+							</tr>-->
 						</table>
 						<div id = "center-save"><input type ="submit" value ="Save" name = "addVO_Save" id = "addVO_Save"></div>
 					</form>				
-				</div><!--End of pos-wrap-->
-			</div><!--End of container-->
-		</div><!--End of main wrap -->
+				</div>
+			</div>
+		</div><!-- End of main wrap -->
 		<div class="footer"><span>&copy; Copyright 2015 | Precision Adjusters | All rights reserved.</span></div>
-	</div><!--End of page-->
+	</div>
 </body>
 </html>
