@@ -13,9 +13,9 @@
 		$sql1_VO = "INSERT INTO vehicleowner_icinfo VALUES ($policyNo,$lname_ic,$fname_ic,$mname_ic,$dlicense,$icname,$vin)";
 		$q1VO = mysql_query($sql1_VO);
 
-		if (!$q1VO) {
-            		echo "Could not successfully run query ($sql1_VO) from DB ($database): " . mysql_error();
-            		exit;
-        	}
+		if(!$q1VO){
+		    echo "Could not successfully run query ($sql1_VO) from DB ($database): " . mysql_error();
+            exit;
+		}
     }
 ?>
