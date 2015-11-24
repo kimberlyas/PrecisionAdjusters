@@ -1,4 +1,4 @@
-<?php //include "userdbConfig.php";
+<?php include "userdbConfig.php";
 
 session_start(); // Start Session
 
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     		$date = date('Y-m-d H:i:s');
          	
          	// Update database
-         	$mysql = "UPDATE userAccount SET loggedIn=1, log=$date WHERE user = '$username'";
+         	$mysql = "UPDATE userAccount SET loggedIn=1, log='$date' WHERE user = '$username'";
          	$result = mysql_query($mysql,$link);
 
          	//Check that it was updated
