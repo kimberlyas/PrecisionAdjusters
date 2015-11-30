@@ -1,9 +1,10 @@
-<?php 
+<?php include "dbaccess.php"; // Connection to PA_Database
 
- include "dbaccess.php"; // Connection to PA_Database
- include "functions.php"; // File with search and view functions
+	include "functions.php"; // File with search and view functions
 
  session_start(); // Start Session
+
+
  $msg = ""; 
  $pageLink = 'viewRecords.php';
 
@@ -32,7 +33,7 @@
 	 	explode_tables($arr);
 	 	// Redirect to view records page
 	 	
-        header('Location: '.$pageLink.'');
+         header('Location: '.$pageLink.'');
 	 }
 	  else
   	 {
@@ -45,8 +46,7 @@
   {
   	  if (isset($_GET["icname"]))
   	 {
-  		 //$arr = search_by_vin($_GET["icname"]);
-  		 $arr = search_by_icname($_GET["icname"]);
+  		 $arr = search_by_vin($_GET["icname"]);
   	 	 explode_tables($arr);
   	 	 // Redirect to view records page
          header('Location: '.$pageLink.'');
@@ -60,8 +60,7 @@
   {
   	  if (isset($_GET["vin"]))
   	 {
-  		 //$arr = search_by_icname($_GET["vin"]);
-  		 $arr = search_by_vin($_GET["vin"]);
+  		 $arr = search_by_icname($_GET["vin"]);
   	 	 explode_tables($arr);
   	 	 // Redirect to view records page
          header('Location: '.$pageLink.'');
@@ -87,10 +86,10 @@
   	 }
   	 
   }
-  else
+  /*else
   {
   	 $msg = "No search executed";
-  }
+  } */
 }
 	   
 ?>
@@ -211,7 +210,7 @@
 									<div id="victimSearch" style="background-color:blue;"> 
 										<th><label for="trn"><strong>Victim's TRN</strong></label><br>
 										<input class="inp-text" name="trn" id="trn" type="text" size="15" /></th>
-										<input type="submit" name="searchVictim" class="button" value="Search by Victim" />
+										<input type="submit" name="searchVictim" class="button" value="Search by Victim">
 										<!--<a href="viewRecords.php?searchVictim=true" class="button" id="searchVictim">Search by Victim</a>-->
 									</div>
 								</td>
@@ -219,7 +218,7 @@
 									<div id="companySearch" style="background-color:blue;"> 
 									<th><label for="icname"><strong>Insurance Company</strong></label><br>
 									<input class="inp-text" name="icname" id="icname" type="text" size="15" /></th>
-									<input type="submit" name="searchCompany" class="button" value="Search by Company" />
+									<input type="submit" name="searchCompany" class="button" value="Search by Company">
 									<!---<div><a href="viewRecords.php?searchCompany=true" class="button" id="searchCompany">Search by Company</a></div>-->
 								</div>
 								</td>
@@ -229,7 +228,7 @@
 									<div id="vehicleSearch" style="background-color:blue;"> 
 									<th><label for="vin"><strong>Vechicle Identification Number</strong></label><br>
 									<input class="inp-text" name="vin" id="vin" type="text" size="15" /></th>
-									<input type="submit" name="searchVehicle" class="button" value="Search by Vehicle" />
+									<input type="submit" name="searchVehicle" class="button" value="Search by Vehicle">
 									<!--<div><a href="viewRecords.php?searchVehicle=true" class="button" id="searchVehicle">Search by Vehicle</a></div>-->
 								</div>
 								</td>
@@ -237,7 +236,7 @@
 									<div id="accidentSearch" style="background-color:blue;"> 
 									<th><label for="accidentNo"><strong>Accident Number</strong></label><br>
 									<input class="inp-text" name="accidentNo" id="accidentNo" type="text" size="15" /></th>
-									<input type="submit" name="searchAccident" class="button" value="Search by Accident" />
+									<input type="submit" name="searchAccident" class="button" value="Search by Accident">
 									<!--<div><a href="viewRecords.php?searchAccident=true" class="button" id="searchAccident">Search by Accident</a></div>-->
 								</div>
 								</td>
