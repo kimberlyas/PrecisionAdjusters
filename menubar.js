@@ -1,3 +1,5 @@
+//Replaced by index.js
+
 var drop;
 
 window.onload = function() {

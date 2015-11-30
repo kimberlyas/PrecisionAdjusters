@@ -204,7 +204,7 @@
 						
 						<tr>
 							<th><label for="dob"><strong>Date Of Birth</strong></label><br>
-							<input class="inp-text" name="dob" id="dob" type="date" size="15" placeholder="DD-MM-YY" required/></th>								
+							<input class="inp-text" name="dob" id="dob" type="date" size="15" placeholder="DD-MM-YYYY" required/></th>								
 							<th><label for="occupation"><strong>Occupation</strong></label><br>
 							<input class="inp-text" name="occupation" id="occupation" type="text" size="15" required/> </th>
 							<th><label for="cnumber"><strong>Cell Number</strong></label><br>

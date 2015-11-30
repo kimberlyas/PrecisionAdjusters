@@ -97,7 +97,7 @@
 
 <!-- SEARCH RECORDS SCREEN-->
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -120,7 +120,7 @@
 				</label>
 				<div id="logo"> 
 					<span>
-						<span><img src="images/Company Logo.png" style="padding-top: 10px"></img></span>
+						<span><img src="Company Logo.png" style="padding-top: 10px"></img></span>
 					</span>
 				</div>
 			</div><!--End of topbar-->
@@ -164,16 +164,14 @@
 					 		</a>  <!--Home (Redirects to respesctive Main Menu screen based on logged in User's type) -->
 						</li>	
 						<li>
-							<a>
 								<?php if (isset($_SESSION["userType"])) : ?>
 								<?php echo $_SESSION["userType"]; ?>
 								<?php endif; ?>
-							</a>
 						</li>	<!--User Type -->
 						<li>
-							<a><?php if (isset($_SESSION["username"])) : ?>
+							<?php if (isset($_SESSION["username"])) : ?>
 							<?php echo $_SESSION["username"]; ?>
-							<?php endif; ?></a>
+							<?php endif; ?>
 						</li>  <!--User Name -->		
 						<li>
 							<a href="logon.php?id=0">Logout
